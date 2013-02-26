@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span2">
+      <!--Sidebar content-->
+
+      Search: <input ng-model="query">
+      <!--Sort by:
+      <select ng-model="orderProp">
+        <option value="name">Alphabetical</option>
+        <option value="age">Newest</option>
+      </select>
+        -->
+    </div>
+    <div class="span10">
+      <!--Body content-->
+        <h2>{{outfit}}</h2>
+      <ul class="members">
+        <li ng-repeat="member in members | filter:query">
+          <a href="#/character/{{member.character_id}}">{{member.name.first}}</a>
+          <p>{{member.rank}}</p>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
