@@ -1,9 +1,6 @@
 'use strict';
 
 /* Controllers */
-var outfit;
-
-
 
 function MyCtrl1() {}
 MyCtrl1.$inject = [];
@@ -15,7 +12,7 @@ MyCtrl2.$inject = [];
 
 function PlanetsideListCtrl($scope, $routeParams, Outfit) {
     
-    var outfit = Outfit.get({}, function (data) {   //success
+    var outfit = Outfit.get({name : $routeParams.name}, function (data) {   //success
         $scope.outfit = data.outfit_list[0].name;
         $scope.members = data.outfit_list[0].members;
     });
