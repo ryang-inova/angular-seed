@@ -12,15 +12,8 @@
         -->
     </div>
     <div class="span10">
-      <!--Body content-->
-        <h2>{{outfit}}</h2>
-      <ul class="members">
-        <li ng-repeat="member in members | filter:query">
-          <a href="#/ps2/character/{{member.character_id}}">{{member.name.first}}</a>
-          <p>{{member.rank}}</p>
-        </li>
-      </ul>
-
+        <p>{{character}}</p>
+        
     </div>
   </div>
 </div>

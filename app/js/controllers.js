@@ -26,8 +26,10 @@ function PlanetsideListCtrl($scope, $routeParams, Outfit) {
 }
 PlanetsideListCtrl.$inject = ['$scope', '$routeParams', 'Outfit']
 
-function PlanetsideDetailCtrl($scope, $routeParams, Outfit) {
-    
+function PlanetsideCharDetailCtrl($scope, $routeParams, Character) {
+    var character = Character.get({character_id : $routeParams.characterId}, function (data) {   //success
+        $scope.character = data;
+    });
 }
-PlanetsideListCtrl.$inject = ['$scope', '$routeParams', 'Outfit']
+PlanetsideCharDetailCtrl.$inject = ['$scope', '$routeParams', 'Character']
 

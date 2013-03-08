@@ -15,8 +15,8 @@ angular.module('myApp.services', ['ngResource']).
                          {get: {method: 'JSONP', params:{ 'name': 'Virtual Hitmen' ,'c:resolve':'member_character(name,type.faction)'}, isArray: false}});
     }).
     factory('Character', function($resource){
-        return $resource('http://census.soe.com/get/ps2-beta/character/',
+        return $resource('http://census.soe.com/get/ps2-beta/character/:character_id',
                          {callback: 'JSON_CALLBACK'},
-                         {get: {method: 'JSONP', params:{ 'name': 'Virtual Hitmen' ,'c:resolve':'member_character(name,type.faction)'}, isArray: false}});
+                         {get: {method: 'JSONP'}});
     });
     
